@@ -5,8 +5,8 @@
 ## 使用说明
 
 - 将 `nsfc.cls` 置于主文档同一文件夹
+- 确定所需字体已安装（默认使用了 `Times New Roman` 和 `中易楷体`）
 - 声明文档类型为 `\documentclass{nsfc}`
 - 如需调整样式，可自行修改 `nsfc.cls`（做好了注释，非常易读）
 - `\chapter` 和 `\section` 为蓝字提纲，自己写的内容从`\subsection`开始
-- 标题、图表、公式、交叉引用自动编号
 - 使用 `xelatex -> bibtex -> xelatex*2` 编译
