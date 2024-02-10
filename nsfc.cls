@@ -3,10 +3,10 @@
 
 % 页面设置
 \LoadClass[a4paper,12pt]{report}% 默认纸张大小为A4
-\RequirePackage[left=30mm,right=30mm,top=25.4mm,bottom=25.4mm]{geometry}% 设置页边距
+\RequirePackage[left=32mm,right=32mm,top=25.4mm,bottom=25.4mm]{geometry}% 设置页边距
 
 % 设置字体
-\RequirePackage[AutoFakeBold=5]{xeCJK}% 启用伪粗体（此行需要在下一行之前）
+\RequirePackage[AutoFakeBold=3]{xeCJK}% 启用伪粗体（此行需要在下一行之前）
 \RequirePackage[UTF8,heading=true,12pt,fontset=fandol]{ctex}% 启用中文支持（mac、linux）
 % \RequirePackage[UTF8,heading=true,12pt,fontset=windows]{ctex}% 启用中文支持（windows）
 \RequirePackage{mathptmx}% 设置公式字体为 Times 而不是 Computer Modern
