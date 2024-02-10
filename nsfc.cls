@@ -9,7 +9,7 @@
 \RequirePackage[AutoFakeBold=3]{xeCJK}% 启用伪粗体（此行需要在下一行之前）
 \RequirePackage[UTF8,heading=true,12pt,fontset=fandol]{ctex}% 启用中文支持（mac、linux）
 % \RequirePackage[UTF8,heading=true,12pt,fontset=windows]{ctex}% 启用中文支持（windows）
-\RequirePackage{mathptmx}% 设置公式字体为 Times 而不是 Computer Modern
+\RequirePackage{newtxmath}% 设置公式字体为 Times 而不是 Computer Modern
 \setmainfont{Times New Roman}% 默认英文字体（需要保证已经安装）
 
 % 设置章节标题
