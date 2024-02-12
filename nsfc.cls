@@ -3,14 +3,29 @@
 
 % 页面设置
 \LoadClass[a4paper,12pt]{report}% 默认纸张大小为A4
-\RequirePackage[left=32mm,right=32mm,top=25.4mm,bottom=25.4mm]{geometry}% 设置页边距
+\RequirePackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}% 设置页边距
 
 % 设置字体
-\RequirePackage[AutoFakeBold=3]{xeCJK}% 启用伪粗体（此行需要在下一行之前）
-\RequirePackage[UTF8,heading=true,12pt,fontset=fandol]{ctex}% 启用中文支持（mac、linux）
-% \RequirePackage[UTF8,heading=true,12pt,fontset=windows]{ctex}% 启用中文支持（windows）
+\RequirePackage[UTF8,heading=true,12pt, fontset=windows]{ctex}% 启用中文支持（windows）
 \RequirePackage{newtxmath}% 设置公式字体为 Times 而不是 Computer Modern
-\setmainfont{Times New Roman}% 默认英文字体（需要保证已经安装）
+\xeCJKsetup{CJKecglue = \hspace{0.3em},}%中英文间空格的间距
+
+% 楷书字体
+\newfontfamily{\enkai}{KaiTi}[AutoFakeBold=3]
+\newCJKfontfamily{\zhkai}{KaiTi}[AutoFakeBold=3]
+\renewcommand{\kaishu}{\zhkai}
+
+% 宋体字体
+\newCJKfontfamily{\zhsong}{SimSun}[AutoFakeBold=3,Scale=0.95]
+\renewcommand{\songti}{\zhsong}
+
+% 黑体字体
+\newCJKfontfamily{\zhhei}{SimHei}[AutoFakeBold=3,Scale=0.95]
+\renewcommand{\heiti}{\zhhei}
+
+% 默认中英文字体
+\setmainfont{Times New Roman}[AutoFakeBold=1,Scale=0.95]% 默认英文字体
+\setCJKmainfont{SimSun}[AutoFakeBold=3,Scale=0.95]% 默认中文字体
 
 % 设置章节标题
 \RequirePackage{xcolor}% 颜色支持
@@ -18,14 +33,14 @@
 \renewcommand{\thesection}{\arabic{section}} % 在section标题编号中去除chapter的编号
 \ctexset{% 利用ctex设置章节样式
     secnumdepth=subsubsection, % 设置章节编号深度
-    chapter/format={\color{nsfc_blue}\bfseries\kaishu\fontsize{14pt}{16pt}\selectfont},
+    chapter/format={\color{nsfc_blue}\bfseries\zhkai\enkai\fontsize{14pt}{16pt}\selectfont},
     chapter/break={\vspace{0pt}},% 取消章节前的换页
     chapter/beforeskip=10pt, % 段前间距
     chapter/afterskip=10pt, % 段后间距
     chapter/indent=2em, % 首行缩进
     chapter/name={（,）},% 编号格式
     chapter/aftername={}, % 编号与标题内容之间
-    section/format={\color{nsfc_blue}\kaishu\fontsize{14pt}{16pt}\selectfont},
+    section/format={\color{nsfc_blue}\enkai\zhkai\fontsize{14pt}{16pt}\selectfont},
     section/indent=2em,% 首行缩进
     section/hang=false,% 取消悬挂缩进
     section/aftername={.}, % 编号与标题内容之间
