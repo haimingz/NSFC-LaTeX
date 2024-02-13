@@ -24,7 +24,7 @@
 \renewcommand{\heiti}{\zhhei}
 
 % 默认中英文字体
-\setmainfont{Times New Roman}[AutoFakeBold=1,Scale=0.95]% 默认英文字体
+\setmainfont{Times New Roman}[AutoFakeBold=2,Scale=0.95]% 默认英文字体
 \setCJKmainfont{SimSun}[AutoFakeBold=3,Scale=0.95]% 默认中文字体
 
 % 设置章节标题
