@@ -6,17 +6,17 @@
 
 ### 字体配置
 
-默认情况下，ctex 针对不同操作系统、不同编译器使用不同的字体（详见 [知乎 - LaTeX 字体配置](https://zhuanlan.zhihu.com/p/538459335)）。为了保证各平台效果一致，统一采用 Windows 系统内置的中易系列字体，即：中易宋体（SimSun）、中易楷体（KaiTi）、中易黑体（SimHei）、中易仿宋（FangSong）。这些字体在 Windows 系统中被叫作宋体、楷体、黑体、仿宋。
+默认情况下，ctex 针对不同操作系统、不同编译器使用不同的字体（详见 [知乎 - LaTeX 字体配置](https://zhuanlan.zhihu.com/p/538459335)）。为了保证各平台效果一致，统一采用 Windows 系统内置的中易系列字体，即：中易宋体（SimSun）、中易楷体（KaiTi）、中易黑体（SimHei）、中易仿宋（FangSong）。这些字体在 Windows 系统中被叫作宋体、楷体、黑体、仿宋。英文采用 Times New Roman 字体。
 
 如使用非 Windows 系统，需要提前将所需字体安装好。在 macOS ，如果直接安装字体后 xelatex 识别不到（暂时不知道什么原因），可复制字体到 `/资源库/fonts/`。在 Linux 系统，可复制字体到 `/usr/share/fonts/`。
 
 ### 格式调整
 
-模板的全部样式设定都包括在 `nsfc.cls` 中。如需调整样式，可对照注释自行修改。
+模板的全部样式设定都包括在 `nsfc.cls` 中。如需调整样式，例如各级标题与正文的字体字号等，可对照注释自行修改。
 
 ### 文档撰写
 
-只需将 `nsfc.cls` 置于主文档同一文件夹，并在主文档声明文档类型为 `\documentclass{nsfc}`。`\chapter` 和 `\section` 为蓝字提纲，自己写的内容从`\subsection`开始
+将 `nsfc.cls` 置于主文档同一文件夹，并在主文档声明文档类型为 `\documentclass{nsfc}`。`\chapter` 和 `\section` 为蓝字提纲，自己写的内容从`\subsection`开始
 
 ### 文件编译
 
