@@ -11,21 +11,21 @@
 \xeCJKsetup{CJKecglue = \hspace{0.3em},}%中英文间空格的间距
 
 % 楷书字体
-\newfontfamily{\enkai}{KaiTi}[AutoFakeBold=3]
-\newCJKfontfamily{\zhkai}{KaiTi}[AutoFakeBold=3]
+\newfontfamily{\enkai}{KaiTi}[AutoFakeBold=2]
+\newCJKfontfamily{\zhkai}{KaiTi}[AutoFakeBold=2]
 \renewcommand{\kaishu}{\zhkai}
 
 % 宋体字体
-\newCJKfontfamily{\zhsong}{SimSun}[AutoFakeBold=3,Scale=0.95]
+\newCJKfontfamily{\zhsong}{SimSun}[AutoFakeBold=2,Scale=0.95]
 \renewcommand{\songti}{\zhsong}
 
 % 黑体字体
-\newCJKfontfamily{\zhhei}{SimHei}[AutoFakeBold=3,Scale=0.95]
+\newCJKfontfamily{\zhhei}{SimHei}[AutoFakeBold=2,Scale=0.95]
 \renewcommand{\heiti}{\zhhei}
 
 % 默认中英文字体
-\setmainfont{Times New Roman}[AutoFakeBold=2,Scale=0.95]% 默认英文字体
-\setCJKmainfont{SimSun}[AutoFakeBold=3,Scale=0.95]% 默认中文字体
+\setmainfont{Times New Roman}[AutoFakeBold=2]% 默认英文字体
+\setCJKmainfont{SimSun}[AutoFakeBold=2]% 默认中文字体
 
 % 设置章节标题
 \RequirePackage{xcolor}% 颜色支持
@@ -51,7 +51,7 @@
 
 % 设置行间距
 \RequirePackage{setspace}
-\onehalfspacing% 设置1.5倍行间距
+\setstretch{1.55}% 设置行间距
 \RequirePackage[shortlabels]{enumitem}% 用于自定义列表编号样式
 \setlist[enumerate]{nosep}% 设置列表的行高和间距与正文一致
 \setlist[itemize]{nosep}% 设置列表的行高和间距与正文一致
@@ -72,6 +72,10 @@
 \RequirePackage{caption}%
 \captionsetup[figure]{labelsep=period, font=small}%
 \captionsetup[table]{labelsep=period, font=small}% 
+
+% 恢复默认的强调样式（斜体），不使用下划线
+\RequirePackage{ulem}
+\normalem
 
 % 其他
 \RequirePackage[hidelinks]{hyperref} % 设置交叉引用超链接
