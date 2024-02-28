@@ -64,14 +64,14 @@
 \setlength{\bibsep}{0pt}% 设置参考文献条目间距
 
 % 设置图表公式编号格式
-\renewcommand{\thefigure}{\arabic{figure}}%
-\renewcommand{\thetable}{\arabic{table}}%
-\renewcommand{\theequation}{\arabic{equation}}%
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
 
 % 设置图表公式标题样式
 \RequirePackage{caption}%
-\captionsetup[figure]{labelsep=period, font=small}%
-\captionsetup[table]{labelsep=period, font=small}% 
+\captionsetup[figure]{labelsep=quad, font=small}%
+\captionsetup[table]{labelsep=quad, font=small}%
 
 % 恢复默认的强调样式（斜体），不使用下划线
 \RequirePackage{ulem}
