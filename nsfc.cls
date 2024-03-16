@@ -8,7 +8,7 @@
 % 设置字体
 \RequirePackage[UTF8,heading=true,12pt, fontset=windows]{ctex}% 启用中文支持（windows）
 \RequirePackage{newtxmath}% 设置公式字体为 Times 而不是 Computer Modern
-\xeCJKsetup{CJKecglue = \hspace{0.3em},}%中英文间空格的间距
+\xeCJKsetup{CJKecglue = \hspace{0.3em},}% 中英文间空格的间距
 
 % 楷书字体
 \newfontfamily{\enkai}{KaiTi}[AutoFakeBold=2]
@@ -33,7 +33,7 @@
 \renewcommand{\thesection}{\arabic{section}} % 在section标题编号中去除chapter的编号
 \ctexset{% 利用ctex设置章节样式
     secnumdepth=subsubsection, % 设置章节编号深度
-    chapter/format={\color{nsfc_blue}\bfseries\zhkai\enkai\fontsize{14pt}{16pt}\selectfont},
+    chapter/format={\color{nsfc_blue}\bfseries\zhkai\enkai\fontsize{14pt}{16pt}\selectfont}, % 设置章标题样式
     chapter/break={\vspace{0pt}},% 取消章节前的换页
     chapter/beforeskip=10pt, % 段前间距
     chapter/afterskip=10pt, % 段后间距
@@ -44,14 +44,14 @@
     section/indent=2em,% 首行缩进
     section/hang=false,% 取消悬挂缩进
     section/aftername={.}, % 编号与标题内容之间
-    subsection/format={\heiti\fontsize{12pt}{14pt}\selectfont},
+    subsection/format={\heiti\fontsize{13pt}{14pt}\selectfont},
     subsubsection/format={\heiti\fontsize{12pt}{14pt}\selectfont},
-    bibname={\centerline{\normalsize\mdseries\heiti\color{black}\hspace{-60pt}{参考文献}}},
+    bibname={\centerline{\normalsize\mdseries\heiti\color{black}\hspace{-60pt}{参考文献}}}, % 参考文献标题及样式
 }
 
 % 设置行间距
 \RequirePackage{setspace}
-\setstretch{1.55}% 设置行间距
+\setstretch{1.5}% 设置行间距
 \RequirePackage[shortlabels]{enumitem}% 用于自定义列表编号样式
 \setlist[enumerate]{nosep}% 设置列表的行高和间距与正文一致
 \setlist[itemize]{nosep}% 设置列表的行高和间距与正文一致
@@ -61,7 +61,7 @@
 \bibliographystyle{gbt7714-numerical}% 顺序编码制
 % \bibliographystyle{gbt7714-author-year}% 作者年份制
 \renewcommand{\bibfont}{\footnotesize}% 设置参考文献字体大小
-\setlength{\bibsep}{0pt}% 设置参考文献条目间距
+\setlength{\bibsep}{2pt plus 2pt minus 2pt}% 设置参考文献条目间距
 
 % 设置图表公式编号格式
 \counterwithout{figure}{chapter}
@@ -76,6 +76,7 @@
 % 恢复默认的强调样式（斜体），不使用下划线
 \RequirePackage{ulem}
 \normalem
+\RequirePackage{xeCJKfntef} % 中文下划线
 
 % 其他
 \RequirePackage[hidelinks]{hyperref} % 设置交叉引用超链接
