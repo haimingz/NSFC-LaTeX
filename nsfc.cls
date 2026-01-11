@@ -40,7 +40,7 @@
     chapter/indent=2em, % 首行缩进
     chapter/name={（,）},% 编号格式
     chapter/aftername={}, % 编号与标题内容之间
-    section/format={\color{nsfc_blue}\enkai\zhkai\fontsize{14pt}{16pt}\selectfont},
+    section/format={\heiti\fontsize{14pt}{16pt}\selectfont},
     section/indent=2em,% 首行缩进
     section/hang=false,% 取消悬挂缩进
     section/aftername={.}, % 编号与标题内容之间
